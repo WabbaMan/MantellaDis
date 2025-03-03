@@ -89,6 +89,8 @@ class ChatManager:
         if(not characters.last_added_character):
             return
         self.__is_generating = True
+
+        messages.add_message(message(characters.last_added_character, "You are an NPC in Skyrim, don't reference real-world things. Format your response purely as NPC dialogue, do not include narrations of the scene or actions.", False, False))
         
         asyncio.run(self.process_response(characters.last_added_character, blocking_queue, messages, characters, actions))
     

@@ -212,7 +212,7 @@ class conversation:
             new_message = self.update_game_events(new_message)
             self.__messages.add_message(new_message)
             player_voiceline = self.__get_player_voiceline(player_character, player_text)
-            text = new_message.text
+            text = new_message.text #APPEND ANY INSTRUCTIONS
             logging.log(23, f"Text passed to NPC: {text}")
 
         ejected_npc = self.__does_dismiss_npc_from_conversation(text)
